@@ -14,3 +14,18 @@ const tutorials = [
 const titleCased = () => {
   return tutorials
 }
+function titleCase(sentence) {
+  return sentence
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+}
+
+// Main function to return array of title-cased tutorials
+function titleCased() {
+  return tutorials.map(titleCase);
+}
+
+module.exports = {
+  titleCased
+};
