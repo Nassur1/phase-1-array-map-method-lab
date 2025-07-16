@@ -11,20 +11,18 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
-}
-function titleCase(sentence) {
-  return sentence
+// Helper function to capitalize the first letter of each word
+function titleCase(title) {
+  return title
     .split(" ")
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 }
 
-// Main function to return array of title-cased tutorials
-function titleCased() {
+// Function that transforms all tutorials into title case
+const titleCased = () => {
   return tutorials.map(titleCase);
-}
+};
 
 module.exports = {
   titleCased
